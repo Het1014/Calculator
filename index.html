@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95bb287b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="body">
+            <div class="display">
+                <input type="text" name="text" id="history" class="displaybox" readonly>
+                <input type="text" name="text" id="calc" class="displaybox" readonly>
+            </div>
+            <div class="buttons">
+                <div class="left">
+                    <div class="row">
+                        <button type="button" class="btn-left" id="clear">C</button>
+                        <button type="button" class="btn-left" id="del">DEL</button>
+                        <button type="button" class="btn-left" id="percent">%</button>
+                        <button type="button" class="btn-op btn-left" id="divide">÷</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-left">7</button>
+                        <button type="button" class="btn btn-left">8</button>
+                        <button type="button" class="btn btn-left">9</button>
+                        <button type="button" class="btn-op btn-left" id="mul">×</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-left">4</button>
+                        <button type="button" class="btn btn-left">5</button>
+                        <button type="button" class="btn btn-left">6</button>
+                        <button type="button" class="btn-op btn-left">-</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-left">1</button>
+                        <button type="button" class="btn btn-left">2</button>
+                        <button type="button" class="btn btn-left">3</button>
+                        <button type="button" class="btn-op btn-left" id="div">+</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-left">0</button>
+                        <button type="button" class="btn-left" id="point">.</button>
+                        <button type="button" class="btn-left" id="result">=</button>
+                        <button type="button" class="btn-left btn-toggle" id="toggle"><i class="fa-solid fa-arrow-left" style="color: #fff;"></i></button>
+                    </div> 
+                </div>
+                <div class="right right-btn">
+                    <div class="row">
+                        <button type="button" class="btn-right" id="deg">Rad</button>
+                        <button type="button" class="btn-right" id="sqrt">√</button>
+                        <button type="button" class="btn-right" id="fact">x!</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn-right trigo">sin</button>
+                        <button type="button" class="btn-right trigo">cos</button>
+                        <button type="button" class="btn-right trigo">tan</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="logs btn-right">ln</button>
+                        <button type="button" class="logs btn-right">log</button>
+                        <button type="button" class="btn-right" id="inv">1/x</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn-right" id="e-pow">e<sup>x</sup></button>
+                        <button type="button" class="btn-right" id="sqr">x<sup>2</sup></button>
+                        <button type="button" class="btn-right" id="sqr-pow">x<sup>y</sup></button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn-right" id="two-pow">2<sup>x</sup></button>
+                        <button type="button" class="btn-right" id="cbrt">∛</button>
+                        <button type="button" class="btn-right" id="cb">x<sup>3</sup></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="operation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
