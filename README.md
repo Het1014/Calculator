@@ -1,6 +1,6 @@
-# Scientific Calculator  
+# Calculator  
 
-A web-based scientific calculator built with **HTML**, **CSS**, and **JavaScript**. This calculator supports basic arithmetic operations, advanced scientific calculations, and trigonometric functions.
+A web-based calculator built with **HTML**, **CSS**, and **JavaScript**. This calculator supports basic arithmetic operations, advanced scientific calculations, and trigonometric functions.
 
 ---
 
@@ -64,11 +64,11 @@ The functionality is implemented in:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/scientific-calculator.git
+   git clone https://github.com/Het1014/Calculator.git
    ```
 2. Navigate to the project directory:  
    ```bash
-   cd scientific-calculator
+   cd Calculator
    ```
 3. Open `index.html` in your browser.  
 
@@ -89,7 +89,7 @@ The functionality is implemented in:
 ## Screenshots  
 
 ### Normal Calculator  
-![Normal Calculator](https://raw.githubusercontent.com/Het1014/Simple-Calculator/master/assets/simple.png)
+![Normal Calculator](https://raw.githubusercontent.com/Het1014/Calculator/master/assets/simple.png)
 
 ### Scientific Calculator  
-![Scientific Calculator](https://raw.githubusercontent.com/Het1014/Simple-Calculator/master/assets/scientific.png)
+![Scientific Calculator](https://raw.githubusercontent.com/Het1014/Calculator/master/assets/scientific.png)
