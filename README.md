@@ -96,4 +96,4 @@ The functionality is implemented in:
 
 ---
 
-Demo: ![Page Not Found](https://het1014.github.io/Calculator/)
+Demo: [Page Not Found](https://het1014.github.io/Calculator/)
