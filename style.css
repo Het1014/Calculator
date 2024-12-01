@@ -21,7 +21,7 @@ body{
 .display{
     display: flex;
     flex-direction: column;
-    width: 344px;
+    width: 350px;
 }
 .big-display{
     width: 624px;
@@ -56,6 +56,7 @@ input{
 }
 .right-btn{
     display: none;
+    transition: 2s ease;
 }
 .right{
     margin-left: 20px;
@@ -71,6 +72,7 @@ input{
     justify-content: flex-start;
     flex-direction:column;
     width: 344px;
+    margin-left: 3px;
     max-width: 100%;
 }
 .btn,#toggle,.btn-left,.btn-right{
@@ -86,9 +88,9 @@ input{
     cursor: pointer;
 }
 #toggle{
-    transition: 0.2s ease-out;
+    transition: 0.8s ease;
 }
 .btn-toggle{
-    transform: rotate(180deg);
-    transition: transform 0.2s ease-out;
+    transform: rotate(-180deg);
+    transition: transform 0.8s ease;
 }
