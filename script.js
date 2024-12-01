@@ -21,7 +21,7 @@ let cbrt = document.getElementById('cbrt');
 toggle.addEventListener('click',()=>{
     display.classList.toggle('big-display');
     toggle.classList.toggle('btn-toggle');
-    right.classList.toggle('right-btn')
+    right.classList.toggle('right-btn');
 })
 trigos.forEach((trigo)=>{
     trigo.addEventListener('click',()=>{
@@ -64,7 +64,7 @@ clear.addEventListener('click',()=>{
     calc.value = '';
 })
 cbrt.addEventListener('click',()=>{
-    calc.value += 'cbrt(';
+    calc.value += '∛(';
 })
 button.forEach((btn)=>{
     btn.addEventListener('click',()=>{
@@ -137,9 +137,9 @@ result.addEventListener('click',()=>{
             numpow();
         }else if(calc.value.includes("2^(")){
             twoexp();
-        }else if (calc.value.includes("cbrt")){
+        }else if (calc.value.includes("∛")){
             cuberoot();
-        }else{
+        }else if (calc.value.includes("=")){
             evaluate();
         }
     }
@@ -151,18 +151,39 @@ deg.addEventListener('click',()=>{
         deg.innerText = 'Rad';
     }
 })
-opbutton.forEach((opbtn)=>{
+/*opbutton.forEach((opbtn)=>{
     opbtn.addEventListener('click',()=>{
         let opvalue = opbtn.textContent;
         if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
         else{
             if(opvalue.includes("×")){
-                calc.value += '*';
+                calc.value += '×';
             }else if(opvalue.includes("÷")){
-                calc.value += '/';
+                calc.value += '÷';
             }else{
                 calc.value += opvalue;
             }
         }
     })
-})
+})*/
+opbutton.forEach((opbtn) => {
+    opbtn.addEventListener('click', () => {
+        let opvalue = opbtn.textContent;
+        if (calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined) {
+            Err();
+        } else {
+            let lastChar = calc.value.slice(-1);
+            if (["+", "-", "×", "÷"].includes(lastChar)) {
+                Err();
+            } else {
+                if (opvalue.includes("×")) {
+                    calc.value += '×';
+                } else if (opvalue.includes("÷")) {
+                    calc.value += '÷';
+                } else {
+                    calc.value += opvalue;
+                }
+            }
+        }
+    });
+});
