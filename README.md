@@ -93,3 +93,7 @@ The functionality is implemented in:
 
 ### Scientific Calculator  
 ![Scientific Calculator](https://raw.githubusercontent.com/Het1014/Calculator/master/assets/scientific.png)
+
+---
+
+Demo: ![Page Not Found](https://het1014.github.io/Calculator/)
