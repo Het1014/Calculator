@@ -45,6 +45,7 @@ function add() {
     history.value = calc.value;
     calc.value = n1+n2;
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
+    
 }
 function sub(){
     x = calc.value;
@@ -54,12 +55,14 @@ function sub(){
     history.value = calc.value;
     calc.value = n1-n2;
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
+    
 }
 function evaluate(){
     x = eval(calc.value);
     history.value = calc.value;
     calc.value = x;
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
+    
 }
 function degcheck() {
     if(deg.innerText === 'Rad'){
@@ -85,11 +88,8 @@ function degcheck() {
 function trigoval() {
     x = calc.value;
     num = x.slice(4);
-    if(num.includes(')')){
-        num = num.split(')');
-    }else{
-        num = num.split('°)');
-    }
+    if(num.includes(')')){num = num.split(')');}
+    else{num = num.split('°)');}
     n1 = parseFloat(num[0]);
 }
 function sine(){
@@ -116,16 +116,12 @@ function sqrt(){
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
 }
 function recursion(n){
-    if(n===0 || n===1){
-        return 1;
-    }else{
-        return n * recursion(n-1);
-    }
+    if(n===0 || n===1){return 1;}
+    else{return n * recursion(n-1);}
 }
 fact.addEventListener('click',()=>{
-    if(calc.value == ''){
-        Err();
-    }else{
+    if(calc.value == ''){Err();}
+    else{
         calc.value += '!';
         x = calc.value;
         num = x.split('!');
@@ -140,13 +136,11 @@ function log(){
     num = x.split('(');
     n2 = parseFloat(num[1]);
     n2 = eval(n2);
-    history.value = calc.value;
-    if(calc.value.includes("ln")){
-        calc.value = Math.log(n2);
-    }else{
-        calc.value = Math.log10(n2);
-    }
+    history.value = calc.value += ')';
+    if(calc.value.includes("ln")){calc.value = Math.log(n2);}
+    else{calc.value = Math.log10(n2);}
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined || calc.value == '-Infinity'){Err()}
+    
 }
 function inverse(){
     history.value = calc.value;
@@ -156,15 +150,17 @@ function inverse(){
 function epower(){
     x = calc.value;
     num = x.split('(');
-    n2 = parseFloat(num[1]);
+    if (num[1] == '-'){
+        n2 = parseFloat(num[2]);
+        console.log(n2);
+    }else{n2 = parseFloat(num[1]);console.log(num);console.log(n2)}
     history.value = calc.value;
     let temp = Math.E;
     calc.value = Math.pow(temp,n2);
 }
 sqr.addEventListener('click',()=>{
-    if(calc.value == ''){
-        Err();
-    }else{
+    if(calc.value == ''){Err();}
+    else{
         calc.value += '^(2)';
         x = calc.value;
         num = x.split('^');
@@ -197,9 +193,8 @@ function cuberoot(){
     if(calc.value == "NaN" || calc.value == "Infinity" || calc.value == '' || calc.value == undefined){Err()}
 }
 cb.addEventListener('click',()=>{
-    if(calc.value == ''){
-        Err();
-    }else{
+    if(calc.value == ''){Err();}
+    else{
         calc.value += '^(3)';
         x = calc.value;
         num = x.split('^');
